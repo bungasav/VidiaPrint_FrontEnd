@@ -412,15 +412,6 @@ div.upload:hover {
     background-color: #1FA89F
 }
 
-.homies  {
-    background-image: url("../img/home.png");
-    margin-left:-180px;
-    background-size: auto;
-    min-height: 620px;
-    max-height: 1200px;
-
-}
-
 .auto
 {
     margin: auto;
@@ -468,70 +459,6 @@ div.upload:hover {
     font-size: 12px;
     font-family: Georgia, 'Times New Roman', Times, serif
 }
-
-li>#stHome>img{
-    height: 40%;
-    width: 40%;
-    content: url("../img/button-home.png");
-}
-
-li>#stHome.active>img{
-    height: 40%;
-    width: 40%;
-    content: url("../img/button-home-active.png");
-}
-
-
-li>#stUser>img{
-    height: 60%;
-    width: 60%;
-    content: url("../img/button-user info.png");
-}
-
-li>#stUser.active>img{
-    height: 60%;
-    width: 60%;
-    content: url("../img/button-user info-active.png");
-}
-
-
-li>#stDoc>img{
-    height: 80%;
-    width: 80%;
-    content: url("../img/button-my doc.png");
-}
-
-li>#stDoc.active>img{
-    height: 80%;
-    width: 80%;
-    content: url("../img/button-my doc-active.png");
-}
-
-li>#stPrint>img{
-    height: 100%;
-    width: 100%;
-    content: url("../img/button-printer loc.png");
-}
-
-li>#stPrint.active>img{
-    height: 100%;
-    width: 100%;
-    content: url("../img/button-printer loc-active.png");
-}
-
-
-li>#stHow>img{
-    height: 40%;
-    width: 40%;
-    content: url("../img/button-howto.png");
-}
-
-li>#stHow.active>img{
-    height: 40%;
-    width: 40%;
-    content: url("../img/button-how to-active.png");
-}
-
 
 .bunga-loader{
     margin:200px auto;

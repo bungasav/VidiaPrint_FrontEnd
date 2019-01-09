@@ -7,8 +7,6 @@ export const userActions = {
     login,
     logout,
     register,
-    getAll,
-    forgotpass,
     confirm
 };
 
@@ -61,28 +59,6 @@ function register(user) {
     function failure(error) { return { type: userConstants.REGISTER_FAILURE, error } }
 }
 
-function forgotpass(email) {
-    return dispatch => {
-        dispatch(request(email));
-
-        userService.forgotpass(email)
-            .then(
-                email => {
-                    dispatch(success());
-                    dispatch(alertActions.success("Reset Password success, check your email"));
-                },
-                error => {
-                    dispatch(failure(error));
-                    dispatch(alertActions.error("Reset Password failed"));
-                }
-            );
-    };
-
-    function request(user) { return { type: userConstants.FORGOT_REQUEST, user } }
-    function success(user) { return { type: userConstants.FORGOT_SUCCESS, user } }
-    function failure(error) { return { type: userConstants.FORGOT_FAILURE, error } }
-}
-
 function confirm(path) {
     return dispatch => {
         dispatch(request(path));
@@ -107,19 +83,4 @@ function confirm(path) {
 function logout() {
     userService.logout();
     return { type: userConstants.LOGOUT };
-}
-
-function getAll() {
-    return dispatch => {
-        dispatch(request());
-
-        userService.getAll()
-            .then(
-                users => dispatch(success(users)),
-                error => dispatch(failure(error))
-            );
-    };
-    function request() { return { type: userConstants.GETALL_REQUEST } }
-    function success(users) { return { type: userConstants.GETALL_SUCCESS, users } }
-    function failure(error) { return { type: userConstants.GETALL_FAILURE, error } }
 }

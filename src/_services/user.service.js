@@ -3,7 +3,6 @@ import { authHeader } from '../_helpers';
 export const userService = {
     login,
     logout,
-    getAll,
     register,
     confirm
 };
@@ -96,14 +95,6 @@ function confirm(path) {
     };
 
     return fetch('https://api.vidiaprint.com/upload/api/account/confirmemail', requestOptions).then(handleResponse);
-}
-
-function getAll() {
-    const requestOptions = {
-        method: 'GET',
-        headers: authHeader()
-    };
-    return fetch('https://api.vidiaprint.com/upload/api/user', requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {

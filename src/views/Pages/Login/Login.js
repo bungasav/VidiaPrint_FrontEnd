@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-import logo from '../../../img/logo1.png';
-import ask from '../../../img/question.png';
 import { Link } from 'react-router-dom';
 import landing from '../../../img/background.jpg';
 import logo2 from '../../../img/logo2.png';
